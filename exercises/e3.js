@@ -9,10 +9,14 @@
  * */
 
 export function getAverage(array) {
-  // Your code goes here...
+  let total = 0
+  
+  for (let num of array) {
+    total += num
+  }
 
+  return total / array.length
 }
-
 
 /** 
  * PART 2
@@ -22,10 +26,16 @@ export function getAverage(array) {
  * */ 
 
 export function getStringSum(str) {
-  // Your code goes here...
+  let total = 0
 
+  for (let char of str) {
+    if (Number(char)) {
+      total += Number(char)
+    }
+  }
+
+  return total
 }
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-3"

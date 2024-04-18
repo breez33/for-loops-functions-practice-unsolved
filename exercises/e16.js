@@ -6,8 +6,19 @@
 // NOTE: You can NOT use the array.flat() method in your code
 
 export function flatArrays(array) {
-  // Your code goes here...
+  let flattenedArray = array.slice();
+  
+  for (let i = 0; i < flattenedArray.length; i++) {
+    if (flattenedArray[i] instanceof Array) {
+      for (let j = 0; j < flattenedArray[i].length; j++) {
+        flattenedArray.splice((i + j) + 1, 0, flattenedArray[i][j]);
+      }
 
+      flattenedArray.splice(i, 1);
+    }
+  }
+
+  return flattenedArray;
 }
 
 

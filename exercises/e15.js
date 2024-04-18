@@ -5,8 +5,17 @@
 // NOTE: You can NOT use the array.concat() method in your code
 
 export function concatArrays(arr1, arr2) {
-  // Your code goes here...
+  let concatedArray = [];
 
+  for (let value of arr1) {
+    concatedArray.push(value);
+  }
+
+  for (let value of arr2) {
+    concatedArray.push(value);
+  }
+
+  return concatedArray;
 }
 
 
